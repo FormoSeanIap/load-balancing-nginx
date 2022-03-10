@@ -6,7 +6,7 @@ app.use(express.urlencoded({extended:false}));
 app.use(express.json()); 
 
 app.get('/', (req, res) => {
-	res.send('hello world'); 
+	res.send('res on 5000'); 
 	console.log("on 5000"); 
 })
 
