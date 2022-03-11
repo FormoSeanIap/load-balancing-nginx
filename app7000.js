@@ -6,8 +6,10 @@ app.use(express.urlencoded({extended:false}));
 app.use(express.json()); 
 
 app.get('/', (req, res) => {
-	res.send('res on 4500'); 
-	console.log("on 4500"); 
+	setTimeout(() => {
+		console.log("on 7000"); 
+		res.send('res on 7000'); 
+	}, 5000);
 })
 
-app.listen(4500);
+app.listen(7000);
