@@ -1,6 +1,6 @@
 # Using Nginx as Load Balancer with Node.js (Express)
 
-- The main introduction can be found at: https://philosophyotaku.medium.com/using-nginx-as-load-balancer-with-node-js-express-63b39948f737
+- The main article can be found [here](https://philosophyotaku.medium.com/using-nginx-as-load-balancer-with-node-js-express-63b39948f737).
 
 # Introduction
 
