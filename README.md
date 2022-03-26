@@ -19,7 +19,7 @@ In this article, I will show what it is, and how it can be done with a step-by-s
 
 - Sometimes we cannot handle tons of requests with only one server, so there might be two or more.
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d5ddbcdb-2ba5-4901-97ce-e7d72f03d355/Untitled.png)
+    ![Untitled](https://www.notion.so/Using-Nginx-as-Load-Balancer-with-Node-js-Express-df76a6d6169046a181795ab722abe029#4ac09a9702d7466db03b006bc1890ade)
     
 - With more than one servers, there will be a problem of how we should distribute the requests to a specific server.
     
