@@ -144,7 +144,7 @@ upstream test {
 
 Since there are three servers listening on 4000, 4500, and 5000, requests will be sent to these three servers in sequence, as shown in the following video.
 
-[1. nginx-load-balancer-default.mp4](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1e4f74db-5041-44fc-8d51-9cf30ecc99ee/1._nginx-load-balancer-default.mp4)
+[1. nginx-load-balancer-default.mp4](./video/1.%20nginx-load-balancer-default.mp4)
 
 ## Weighted Load Balancing
 
