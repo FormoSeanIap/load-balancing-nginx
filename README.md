@@ -146,6 +146,8 @@ Since there are three servers listening on 4000, 4500, and 5000, requests will b
 
 [1. nginx-load-balancer-default.mp4](./video/1.%20nginx-load-balancer-default.mp4)
 
+https://user-images.githubusercontent.com/55405280/160231407-127b5815-36b6-4f27-b076-ec8a30de7889.mp4
+
 ## Weighted Load Balancing
 
 If we add two weights on server 5000 and send four requests:
