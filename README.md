@@ -107,7 +107,7 @@ As illustrated in the figure, we use `proxy_pass` to send requests into `upstrea
 
 The exact setting in Nginx comes in like this
 
-```jsx
+```
 upstream test {
         #ip_hash;
         #least_conn;
@@ -214,7 +214,7 @@ In this five seconds, any request will not be sent to this server thanks to `lea
 
 Shutdown the server listening on 4500, but don’t remove it from the upstream. 
 
-```jsx
+```
 upstream test {
         server 127.0.0.1:4000;
         server 127.0.0.1:4500;
@@ -230,7 +230,7 @@ We can add more settings on server to decide what happens if a server goes down.
 
 For example, `max_fails=3 fail_timeout=5s` means Nginx will try at most three times on this server, and will not try in the following 5 seconds if all three tries failed. 
 
-```jsx
+```
 upstream test {
         server 127.0.0.1:4000;
         server 127.0.0.1:4500 max_fails=3 fail_timeout=5s;
