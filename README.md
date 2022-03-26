@@ -144,8 +144,6 @@ upstream test {
 
 Since there are three servers listening on 4000, 4500, and 5000, requests will be sent to these three servers in sequence, as shown in the following video.
 
-[1. nginx-load-balancer-default.mp4](./video/1.%20nginx-load-balancer-default.mp4)
-
 https://user-images.githubusercontent.com/55405280/160231407-127b5815-36b6-4f27-b076-ec8a30de7889.mp4
 
 ## Weighted Load Balancing
@@ -162,7 +160,7 @@ upstream test {
 
 We will see two of them coming from server 5000.
 
-[2. nginx-load-balancer-weight.mp4](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/135bd5f0-6eb1-4ead-9532-f311ce17b307/2._nginx-load-balancer-weight.mp4)
+https://user-images.githubusercontent.com/55405280/160231458-c330559f-f1b4-4496-b288-b2abf3fbd923.mp4
 
 ## IP Hash Load Balancing
 
@@ -179,7 +177,7 @@ upstream test {
 
 We will see response coming from the same server. This is because Nginx has already remembered my IP and will always send me to the same server. 
 
-[3. nginx-load-balancer-IP-hash.mp4](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/31a5e33e-3272-4fbe-b1c9-deec040432e5/3._nginx-load-balancer-IP-hash.mp4)
+https://user-images.githubusercontent.com/55405280/160231464-95018e83-0362-401c-99ca-466954328e51.mp4
 
 ## Least Connection Load Balancing
 
@@ -210,7 +208,7 @@ As shown in the video, we can see the fourth server (the 6000 one) pending becau
 
 In this five seconds, any request will not be sent to this server thanks to `least_conn`. 
 
-[4. nginx-load-balancer-least-connection.mp4](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/318672ed-874d-4045-87ca-3b3687ea6937/4._nginx-load-balancer-least-connection.mp4)
+https://user-images.githubusercontent.com/55405280/160231472-f70b4874-e686-4015-bd71-21d478672c86.mp4
 
 ## Health Checks
 
@@ -226,7 +224,7 @@ upstream test {
 
 We will be able to see Nginx doing health check automatically, so the response will not come from server 4500, and can see error logs at the same time.
 
-[5. nginx-load-balancer-fails.mp4](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9cdaad6b-0cd3-401d-81c0-c184e7b7cdf6/5._nginx-load-balancer-fails.mp4)
+https://user-images.githubusercontent.com/55405280/160231485-e568b22d-e92e-4bf9-8fe8-9c5bce0538ca.mp4
 
 We can add more settings on server to decide what happens if a server goes down.
 
@@ -240,7 +238,7 @@ upstream test {
 }
 ```
 
-[6. nginx-load-balancer-max-fails-timeout.mp4](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9ff3419c-d5ec-4a21-87a7-7bb442c9f99e/6._nginx-load-balancer-max-fails-timeout.mp4)
+https://user-images.githubusercontent.com/55405280/160231496-5a648fea-d6dc-4cde-baa8-8e35c1a35a66.mp4
 
 # Conclusion
 
