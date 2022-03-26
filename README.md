@@ -19,15 +19,15 @@ In this article, I will show what it is, and how it can be done with a step-by-s
 
 - Sometimes we cannot handle tons of requests with only one server, so there might be two or more.
     
-    ![Untitled](https://www.notion.so/Using-Nginx-as-Load-Balancer-with-Node-js-Express-df76a6d6169046a181795ab722abe029#4ac09a9702d7466db03b006bc1890ade)
+    ![Untitled](./img/load-balancing-nginx-1.jpg)
     
 - With more than one servers, there will be a problem of how we should distribute the requests to a specific server.
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/00332fd8-2c7f-4693-9a0f-70001639b1f3/Untitled.png)
+    ![Untitled](./img/load-balancing-nginx-2.jpg)
     
 - So we use a load balancer to solve this problem.
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e502271f-1c6b-46b7-a1b4-e7dbd07ab59f/Untitled.png)
+    ![Untitled](./img/load-balancing-nginx-3.jpg)
     
 - In this case, we use Nginx as a load balancer.
 - We can use different algorithm to decide which server a specific request will go to.
@@ -40,24 +40,24 @@ Different services or servers have their own algorithm, and I will introduce onl
 
 - Definition: to distribute requests equally to different servers.
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0b85749b-57c2-46a8-9aff-8abb2a44deae/Untitled.png)
+    ![Untitled](./img/load-balancing-nginx-4.jpg)
     
 
 ### ****Weighted Load Balancing****
 
 - Definition: to distribute request based on the weights on server.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f438c443-b775-4b80-a94d-1b7b17250e89/Untitled.png)
+![Untitled](./img/load-balancing-nginx-5.jpg)
 
 ### Least Load(Connections) Balancing
 
 - Definition: to distribute the requests to the least loaded(connections) server.
 
-![There is a new request, and there are two servers. Server B is handling less requests than Server A.](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/af6c6f41-b474-466a-82cc-f9685e6a784b/Untitled.png)
+![There is a new request, and there are two servers. Server B is handling less requests than Server A.](./img/load-balancing-nginx-6.jpg)
 
 There is a new request, and there are two servers. Server B is handling less requests than Server A.
 
-![Since Server B was handling the least requests, this request will be sent to Server B](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/766e88d1-f723-4c4e-8d26-7112b80501a2/Untitled.png)
+![Since Server B was handling the least requests, this request will be sent to Server B](./img/load-balancing-nginx-7.jpg)
 
 Since Server B was handling the least requests, this request will be sent to Server B
 
@@ -65,11 +65,11 @@ Since Server B was handling the least requests, this request will be sent to Ser
 
 - Definition: the requests coming from the same IP will always be sent to a specific server.
 
-![Without hash balancing](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f6942720-6884-4555-9e95-17b06a018480/Untitled.png)
+![Without hash balancing](./img/load-balancing-nginx-8.jpg)
 
 Without hash balancing
 
-![With hash balancing](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/86695e89-c6fd-4e9e-8d0e-4dae53d668f8/Untitled.png)
+![With hash balancing](./img/load-balancing-nginx-9.jpg)
 
 With hash balancing
 
@@ -103,7 +103,7 @@ Noted again that you need basic ideas of how Nginx works, in order to follow.
 
 As illustrated in the figure, we use `proxy_pass` to send requests into `upstream` , and decide what algorithm we are going to use in `upstream.` 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/034ad0a0-d9dc-46b8-85dd-09e291c065cb/Untitled.png)
+![Untitled](./img/load-balancing-nginx-10.jpg)
 
 The exact setting in Nginx comes in like this
 
