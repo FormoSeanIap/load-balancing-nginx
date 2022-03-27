@@ -1,6 +1,6 @@
 # Using Nginx as Load Balancer with Node.js (Express)
 
-- The main article can be found [here](https://philosophyotaku.medium.com/using-nginx-as-load-balancer-with-node-js-express-63b39948f737).
+- This article can also be found on [Medium](https://philosophyotaku.medium.com/using-nginx-as-load-balancer-with-node-js-express-63b39948f737).
 
 # Introduction
 
@@ -19,15 +19,15 @@ In this article, I will show what it is, and how it can be done with a step-by-s
 
 - Sometimes we cannot handle tons of requests with only one server, so there might be two or more.
     
-    ![Untitled](./img/load-balancing-nginx-1.jpg)
+	<img src="./img/load-balancing-nginx-1.jpg" width="50%">
     
 - With more than one servers, there will be a problem of how we should distribute the requests to a specific server.
     
-    ![Untitled](./img/load-balancing-nginx-2.jpg)
+	<img src="./img/load-balancing-nginx-2.jpg" width="50%">
     
 - So we use a load balancer to solve this problem.
     
-    ![Untitled](./img/load-balancing-nginx-3.jpg)
+	<img src="./img/load-balancing-nginx-3.jpg" width="50%">
     
 - In this case, we use Nginx as a load balancer.
 - We can use different algorithm to decide which server a specific request will go to.
@@ -40,24 +40,23 @@ Different services or servers have their own algorithm, and I will introduce onl
 
 - Definition: to distribute requests equally to different servers.
     
-    ![Untitled](./img/load-balancing-nginx-4.jpg)
-    
+    <img src="./img/load-balancing-nginx-4.jpg" width="50%">
 
 ### ****Weighted Load Balancing****
 
 - Definition: to distribute request based on the weights on server.
 
-![Untitled](./img/load-balancing-nginx-5.jpg)
+	<img src="./img/load-balancing-nginx-5.jpg" width="50%">
 
 ### Least Load(Connections) Balancing
 
 - Definition: to distribute the requests to the least loaded(connections) server.
 
-![There is a new request, and there are two servers. Server B is handling less requests than Server A.](./img/load-balancing-nginx-6.jpg)
+	<img src="./img/load-balancing-nginx-6.jpg" width="50%">
 
-There is a new request, and there are two servers. Server B is handling less requests than Server A.
+- There is a new request, and there are two servers. Server B is handling less requests than Server A.
 
-![Since Server B was handling the least requests, this request will be sent to Server B](./img/load-balancing-nginx-7.jpg)
+	<img src="./img/load-balancing-nginx-7.jpg" width="50%">
 
 Since Server B was handling the least requests, this request will be sent to Server B
 
